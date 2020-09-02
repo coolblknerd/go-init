@@ -44,7 +44,7 @@ func createMainFile(projectName string) {
 
 	time.Sleep(2 * time.Second)
 
-	tmpl := template.Must(template.ParseFiles("/Users/madblkman/go/src/github.com/coolblknerd/go-init/templates/main.tmpl"))
+	tmpl := template.Must(template.ParseFiles("../templates/main.tmpl"))
 	tmpl.Execute(f, data)
 }
 
