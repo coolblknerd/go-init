@@ -7,7 +7,7 @@ Things to think about:
 -- We need to create test for project package
 */
 
-package project
+package create
 
 import (
 	"fmt"

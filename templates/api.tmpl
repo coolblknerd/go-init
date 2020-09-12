@@ -1,0 +1,26 @@
+package {{ .PackageName }}
+
+import (
+    "net/http"
+    "log"
+
+    "github.com/gorilla/mux"
+)
+
+{{ range .Handles }}
+func {{ .Name }}(w http.ResponseWriter, r *http.Request) {
+
+}
+{{ end }}
+
+func main() {
+    r := mux.NewRouter()
+    /*
+        Don't forget to add your handlers here!
+        ~~~
+        r.HandleFunc("/", home)
+        r.HandleFunc("/clients", getAllClients)
+        r.HandleFunc("/client/{id}", getOneClient).Methods("GET")
+    */
+    log.Fatal(http.ListenAndServe(":8080", r))
+}
